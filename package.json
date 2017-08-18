@@ -1,0 +1,35 @@
+{
+  "name": "wunderground-cli",
+  "version": "0.0.1",
+  "description": "A Command line tool for wunderground.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "weather": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirkoschubert/wunderground-cli.git"
+  },
+  "keywords": [
+    "node",
+    "weather",
+    "wunderground"
+  ],
+  "author": "Mirko Schubert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirkoschubert/wunderground-cli/issues"
+  },
+  "homepage": "https://github.com/mirkoschubert/wunderground-cli#readme",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "fs-extra": "^4.0.1",
+    "got": "^7.1.0",
+    "moment": "^2.18.1",
+    "promise": "^8.0.1"
+  }
+}
