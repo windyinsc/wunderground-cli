@@ -69,7 +69,9 @@ app
   .command('now')
   .description('Output of the actual weather of all saved cities')
   .action(() => {
-    // output
+    
+    wunder.now(cfg.data.cities);
+    //wunder.getWeather(cfg.data.cities[0]);
   });
 
 app.parse(process.argv);
