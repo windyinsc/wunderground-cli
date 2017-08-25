@@ -60,18 +60,25 @@ app
     console.log('\nYou have %s saved cities!', cfg.data.cities.length);
     for (var i = 0; i < cfg.data.cities.length; i++) {
       
-      console.log((options.stations) ? chalk.green(cfg.data.cities[i].name) + chalk.dim(' (' + cfg.data.cities[i].station + ')') : cfg.data.cities[i].name);      
+      console.log((options.stations) ? chalk.white((i + 1) + '. ') + chalk.green(cfg.data.cities[i].name) + chalk.dim(' (' + cfg.data.cities[i].station + ')') : chalk.white((i + 1) + '. ') + cfg.data.cities[i].name);      
     }
 
   });
 
 app
-  .command('now')
+  .command('now [id]')
   .description('Output of the actual weather of all saved cities')
-  .action(() => {
-    
-    wunder.now(cfg.data.cities);
-    //wunder.getWeather(cfg.data.cities[0]);
+  .option('-i, --imperial', 'Imperial units')
+  .option('-m, --metric', 'Metric Units')
+  .option('-f, --fahrenheit', 'Temperature in °F')
+  .option('-c, --celsius', 'Temperature in °C')
+  .action((id, options) => {
+    if (!id) {
+      wunder.now(cfg.data.cities);
+    } else {
+      wunder.now(cfg.data.cities[id - 1]);
+    }
+
   });
 
 app.parse(process.argv);
