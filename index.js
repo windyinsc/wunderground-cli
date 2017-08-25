@@ -4,7 +4,6 @@
 const Config = require('./lib/config');
 const Wunder = require('./lib/wunderapi');
 const app = require('commander');
-const chalk = require('chalk');
 
 var cfg = new Config();
 var wunder = new Wunder(cfg.data.apikey);
@@ -42,7 +41,7 @@ app
       wunder.searchCity(city)
       .then(res => cfg.saveCity(res))
       .then(res => {
-        console.log('The city %s is saved!', chalk.green(res.name));
+        console.log('The city %s is saved!', res.name);
       })
       .catch(err => {
         console.error(err.message);        
@@ -54,14 +53,10 @@ app
 app
   .command('list')
   .description('Lists all cities you have saved')
-  .option('-s, --stations', 'Shows the station identifier for each enry')
+  .option('-s, --stations', 'Shows the station identifier for each entry')
   .action((options) => {
-    
-    console.log('\nYou have %s saved cities!', cfg.data.cities.length);
-    for (var i = 0; i < cfg.data.cities.length; i++) {
-      
-      console.log((options.stations) ? chalk.white((i + 1) + '. ') + chalk.green(cfg.data.cities[i].name) + chalk.dim(' (' + cfg.data.cities[i].station + ')') : chalk.white((i + 1) + '. ') + cfg.data.cities[i].name);      
-    }
+
+    wunder.list(options);
 
   });
 
