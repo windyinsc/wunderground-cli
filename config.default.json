@@ -1,4 +1,6 @@
 {
   "apikey": "",
+  "units": "metric",
+  "temp": "c",
   "cities": []
 }
