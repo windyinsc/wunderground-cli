@@ -1,7 +1,8 @@
 'use strict';
 
 const test = require('ava');
-const Config = require('../lib/config');
+const rp = require('app-root-path');
+const Config = require(rp + '/lib/config');
 
 
 test('load default configuration file', t => {
