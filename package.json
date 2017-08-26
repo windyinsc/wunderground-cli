@@ -4,7 +4,8 @@
   "description": "A Command line tool for wunderground.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava test/*.js --verbose",
+    "test:watch": "ava test/*.js --verbose --watch"
   },
   "bin": {
     "weather": "index.js"
@@ -35,5 +36,8 @@
     "inquirer": "^3.2.2",
     "moment": "^2.18.1",
     "promise": "^8.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0"
   }
 }
