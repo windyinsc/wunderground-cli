@@ -15,5 +15,5 @@ test('load default configuration file', t => {
 
 });
 
-test.todo('try loading non-existant configuration file');
-test.todo('try checking city data');
+test.todo ('try loading non-existant configuration file');
+test.todo ('try checking city data');
