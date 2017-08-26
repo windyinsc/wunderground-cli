@@ -92,7 +92,17 @@ app
     } else {
       wunder.now(cfg.data.cities[id - 1]);
     }
+  });
 
+app
+  .command('alert [id]')
+  .description('Alerts')
+  .action(id => {
+    if (!id) {
+      // err
+    } else {
+      wunder.alert(id);
+    }
   });
 
 app.parse(process.argv);
