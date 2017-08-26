@@ -51,6 +51,25 @@ app
   });
 
 app
+  .command('remove [id]')
+  .alias('rm')
+  .description('Removes a city from your list')
+  .action(id => {
+
+    if (!id) {
+      console.error(new Error('You should specify the City ID (see: weather list)!'));
+    } else {
+      cfg.deleteCity(id)
+        .then(res => {
+          console.log('\nYour city has been removed.\n');
+        })
+        .catch(err => {
+          console.error(err.message);
+        });
+    }
+  });
+
+app
   .command('list')
   .description('Lists all cities you have saved')
   .option('-s, --stations', 'Shows the station identifier for each entry')
