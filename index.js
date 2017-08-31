@@ -105,5 +105,27 @@ app
     }
   });
 
+app
+  .command('forecast [id]')
+  .description('10 day forecast for the city with a given id')
+  .option('-d, --days <n>', 'number of days to be shown', parseInt)
+  .action((id, options) => {
+    if (!id) {
+      for (var i = 0; i < cfg.data.cities.length; i++) {
+        if (options.days) {
+          wunder.forecast(i + 1, options.days);
+        } else {
+          wunder.forecast(i + 1, 3);        
+        }
+      }
+    } else {
+      if (options.days) {
+        wunder.forecast(id, options.days)
+      } else {
+        wunder.forecast(id);
+      }
+    }
+  });
+
 app.parse(process.argv);
 if (app.args.length === 0) app.help();

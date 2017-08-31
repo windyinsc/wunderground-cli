@@ -54,16 +54,34 @@ weather now 1
 
 ### Getting the forecast
 
-This is still under construction.
+If you want to look up the forecast for the next days, you can simply call:
+
+```
+weather forecast
+```
+
+This will show all saved cities with a 3 day forecast. If you put the ID from `weather list` behind, you can select the city. In this case the full 10 day forecast will be shown. If you want to get more or less days, you can always use the option `--days`.
+
+```
+weather forecast 1 --days 5
+```
+
+### Getting Alerts
+
+Alerts are still work in progress. To try it out, use the following command:
+
+```
+weather alert 1
+```
 
 ## Roadmap
 
 - [x] Store the API key in a config file
 - [x] Confirm cities with a free API call and store them in a config file
-- [ ] Remove cities from the config file
+- [x] Remove cities from the config file
 - [x] List all added cities in a list
 - [x] Read weather data from one or all added cities 
-- [ ] Get forecast of one or all added cities
+- [x] Get forecast of one or all added cities
 - [x] Get imperial or metric units and temperatur in Fahrenheit or Celsius
 - [ ] Switch units and temperature scales quickly with (global?) options
 - [ ] Ask if it's raining soon
