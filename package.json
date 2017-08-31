@@ -1,6 +1,6 @@
 {
   "name": "wunderground-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Command line tool for wunderground.com",
   "main": "index.js",
   "scripts": {
