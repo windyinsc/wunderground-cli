@@ -80,9 +80,10 @@ weather alert 1
 - [x] Confirm cities with a free API call and store them in a config file
 - [x] Remove cities from the config file
 - [x] List all added cities in a list
-- [x] Read weather data from one or all added cities 
+- [x] Read weather data from one or all added cities
 - [x] Get forecast of one or all added cities
-- [x] Get imperial or metric units and temperatur in Fahrenheit or Celsius
+- [x] Get imperial or metric units and temperature in Fahrenheit or Celsius
+- [ ] Format date and time better
 - [ ] Switch units and temperature scales quickly with (global?) options
 - [ ] Ask if it's raining soon
 - [ ] Ask if any weather warnings are in your area.
