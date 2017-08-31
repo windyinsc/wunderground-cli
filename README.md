@@ -1,6 +1,6 @@
 # Wunderground CLI
 
-[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com) [![npm](https://img.shields.io/npm/l/express.svg)](wunderground-cli/LICENSE) [![Travis](https://img.shields.io/travis/mirkoschubert/wunderground-cli.svg)](https://travis-ci.org/mirkoschubert/wunderground-cli)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/mirkoschubert/wunderground-cli/blob/master/LICENSE) [![Travis](https://img.shields.io/travis/mirkoschubert/wunderground-cli.svg)](https://travis-ci.org/mirkoschubert/wunderground-cli)
 
 **Wunderground CLI** is a command line tool for accessing weather data from [wunderground.com](https://www.wunderground.com). It can store multiple cities and show the current weather und forecast of eiter one or all cities.
 
@@ -9,7 +9,7 @@
 Since the application is written for node.js installing is pretty easy. Fork or download the code and switch to the working folder, then just type the following command in your shell:
 
 ```
-npm install -g
+npm install wunderground-cli -g
 ```
 After installing the app, please register at wunderground.com and set up an API key [here](https://www.wunderground.com/weather/api). You can get 500 API calls per day and 10 API calls per minute for free. Copy the API key and save it with the following command:
 
