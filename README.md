@@ -6,7 +6,7 @@
 
 ## Installation
 
-Since the application is written for node.js installing is pretty easy. Fork or download the code and switch to the working folder, then just type the following command in your shell:
+Since the application is written for node.js installing is pretty forward. You should install it globally, so you can use the CLI:
 
 ```
 npm install wunderground-cli -g
