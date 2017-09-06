@@ -38,7 +38,7 @@ app
 app
   .command('now [id]')
   .description('Output of the actual weather of all saved cities')
-  .action(id => ui.now(id));
+  .action(id => ui.nownew(id));
 
 app
   .command('alert [id]')
