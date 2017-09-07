@@ -59,3 +59,4 @@ typings/
 
 # User data
 config.json
+config.backup.json
