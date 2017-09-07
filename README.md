@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/mirkoschubert/wunderground-cli/blob/master/LICENSE) [![Travis](https://img.shields.io/travis/mirkoschubert/wunderground-cli.svg)](https://travis-ci.org/mirkoschubert/wunderground-cli)
 
-![gif](http://static.mirkoschubert.de/wunderground.gif)
+![picture](./wunderground.png)
 
 **Wunderground CLI** is a command line tool for accessing weather data from [wunderground.com](https://www.wunderground.com). It can store multiple cities and show the current weather und forecast of eiter one or all cities.
 
