@@ -11,7 +11,7 @@ var ui = new Ui();
 var wunder = new Wunder(cfg.data.apikey);
 
 app
-  .version('0.2.0');
+  .version('0.2.1');
 
 app
   .command('init [key]')
