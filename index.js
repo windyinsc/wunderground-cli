@@ -11,7 +11,7 @@ var ui = new Ui();
 var wunder = new Wunder(cfg.data.apikey);
 
 app
-  .version('0.1.1');
+  .version('0.2.0');
 
 app
   .command('init [key]')
@@ -38,7 +38,7 @@ app
 app
   .command('now [id]')
   .description('Output of the actual weather of all saved cities')
-  .action(id => ui.nownew(id));
+  .action(id => ui.now(id));
 
 app
   .command('alert [id]')
