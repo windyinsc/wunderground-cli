@@ -42,13 +42,15 @@ weather list
 
 ### Retrieving the weather
 
-When you're set up, you can retrieve the weather of all saved cities at any time:
+When you're set up, you can retrieve the weather of the **first city** (possibly your home town) from the list at any time:
 
 ```
 weather now
 ```
 
-Please note, that multiple cities need multiple API calls. If you want to see the weather of only one city, get the ID from `weather list` and input:
+**Please note**: Due to restrictions of the free plan of the Wunderground API it is no longer possible to show the data of all cities at the same time.
+
+If you want to see the weather of another city, get the ID from `weather list` and input:
 
 ```
 weather now 1
@@ -76,6 +78,16 @@ Alerts are still work in progress. To try it out, use the following command:
 weather alert 1
 ```
 
+### Settings
+
+If you want to change the temperature scale (Fahrenheit or Celsius) or the system of measurement (Imperial or Metric), you should type:
+
+```
+weather settings
+```
+
+...and follow the instructions. It will be saved globally.
+
 ## Roadmap
 
 - [x] Store the API key in a config file
@@ -85,8 +97,8 @@ weather alert 1
 - [x] Read weather data from one or all added cities
 - [x] Get forecast of one or all added cities
 - [x] Get imperial or metric units and temperature in Fahrenheit or Celsius
-- [ ] Format date and time better
-- [ ] Switch units and temperature scales quickly with (global?) options
+- [x] Format date and time better
+- [x] Switch units and temperature scales quickly with global options
 - [ ] Ask if it's raining soon
 - [ ] Ask if any weather warnings are in your area.
 

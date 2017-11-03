@@ -11,12 +11,17 @@ var ui = new Ui();
 var wunder = new Wunder(cfg.data.apikey);
 
 app
-  .version('0.2.1');
+  .version('0.3.0');
 
 app
   .command('init [key]')
   .description('Initializes the Wunderground API')
   .action(key => ui.init(key));
+
+app
+.command('settings')
+.description('Change temperature scale and system of measurement')
+.action(() => ui.settings());
 
 app
   .command('add [city]')

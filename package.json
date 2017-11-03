@@ -4,8 +4,8 @@
   "description": "A Command line tool for wunderground.com",
   "main": "index.js",
   "scripts": {
-    "test": "ava test/*.js --verbose",
-    "test:watch": "ava test/*.js --verbose --watch"
+    "test": "ava test/digits.js --verbose",
+    "test:watch": "ava test/digits.js --verbose --watch"
   },
   "bin": {
     "weather": "index.js"
