@@ -1,4 +1,5 @@
 #!/usr/bin/env node --harmony
+
 'use strict'
 
 const Config = require('./lib/config');
@@ -19,9 +20,9 @@ app
   .action(key => ui.init(key));
 
 app
-.command('settings')
-.description('Change temperature scale and system of measurement')
-.action(() => ui.settings());
+  .command('settings')
+  .description('Change temperature scale and system of measurement')
+  .action(() => ui.settings());
 
 app
   .command('add [city]')
@@ -57,4 +58,4 @@ app
   .action((id, options) => ui.forecast(id, options));
 
 app.parse(process.argv);
-if (app.args.length === 0) app.help();
+if (!app.args.length === 0) app.help();
